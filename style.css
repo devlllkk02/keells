@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+html{
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+::-moz-focus-inner{
+    border: none;
+}
+a{
+    outline:  none;
+}
+body{
+    font-family: Raleway;
+    color: #222;
+}
+.header{
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    border-bottom: 3px solid rgba(250, 250, 250,.8);
+    z-index: 1;
+
+}
+
+.one-page{
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.navbar{
+    display: flex;
+    background-color: #62bb46aa;
+    align-items: center;
+}
+
+.navbar img{
+    
+    height: 60px;
+    margin: 10px 10px 10px 50px;
+    padding: 5px;
+}
+
+.navbar ul {
+    flex: 1;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    margin-right: 50px;
+   
+
+}
+
+.navbar li{ text-decoration: none;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    
+}
+
+.navbar li:hover {
+    background-color: rgb(255, 255, 255,.1);
+}
+
+
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+/*
+section{
+    width: 80%;
+    background-color: red;
+    
+}*/
+
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url("Images/Home_1_BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, .4);
+    background-blend-mode: multiply;
+    
+    /*animation: slide 10s infinite;*/
+
+}
+
+.home-header-1{
+    text-transform: uppercase;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 130px;
+    margin-bottom: 30px;
+}
+
+.home-header-2{
+    
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.home-btn{
+    padding: 20px;
+    background-color: #62bb46aa;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold ;
+    text-align: center; 
+}
+
+.home-btn:hover{
+
+    background-color: rgba(255,255,255, .2);
+}
+
+@keyframes slide {
+
+    0%{
+        opacity: 0;
+        background-image: url("Images/Home_1_BG.jpg");
+    }
+    20%{
+        opacity: 1;
+        background-image: url("Images/Home_1_BG.jpg");
+
+    }
+    20.01%{
+        opacity: 0;
+        background-image: url("Images/Home_2_BG.jpg");
+
+    }
+    40%{
+        opacity: 1;
+        background-image: url("Images/Home_2_BG.jpg");
+
+    }
+    40.01%{
+
+        background-image: url("Images/Home_3_BG.jpg");
+
+    }
+    60%{
+ 
+        background-image: url("Images/Home_3_BG.jpg");
+
+    }
+    60.01%{
+
+        background-image: url("Images/Home_4_BG.jpg");
+
+    }
+    80%{
+ 
+        background-image: url("Images/Home_4_BG.jpg");
+
+    }
+    80.01%{
+
+        background-image: url("Images/Home_5_BG.jpg");
+
+    }
+    100%{
+ 
+        background-image: url("Images/Home_5_BG.jpg");
+
+    }
+}
+
+.home h1, h2{
+    color: white;
+}
+
+.about,.achievements,.contactus{
+    display: flex;
+    flex-direction: row;
+    scroll-snap-align: center;
+  
+}
+
+/* ABOUT SECTION*/
+.sec-left{
+ flex: 2;
+ padding: 1em;
+
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+
+ background-color: rgb(250, 250, 250);
+}
+
+
+
+.sec-left p{
+    text-align: justify;
+    margin: 20px 1vw;
+    padding: 0 20px;
+    font-size: 18px;
+    line-height: 1.75rem;    
+}
+
+.sec-right {
+    flex: 3;
+    width: 100%;
+    height:  100vh;
+    background-image: url("Images/About_BG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.topic-heading{
+    color:#62bb46 ;
+    margin: 100px auto 30px auto;
+    text-transform: uppercase;
+    font-size: 2rem;
+    border-bottom: solid 5px  #62bb46 ;
+}
+
+/* ACHIEVEMENTS SECTION*/
+
+.achievements-content{
+    order: 2;  
+}
+
+
+.achievements-img{
+    order: 1;
+    background-image: url("Images/Achievement_BG.jpg");
+}
+
+/* Contact Us*/
+
+.sub-topic-heading{
+    color:#222 ;
+    margin: 0px 1vw;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    font-size: 1.25rem;
+    text-align: left;
+
+}
+
+.contactus-address{
+    margin-bottom: 20px;
+}
+.contactus-address p{
+    color:#222 ;
+    margin: 2px 1vw;
+    padding: 0 20px;
+}
+
+.social-media{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.social-media img{
+    max-width: 32px;
+    margin-top: 15px;
+    margin-left: 30px;
+    padding: 0px;
+}
+
+.contactus-img{
+    order: 1;
+    background-image: url("Images/Contact_2_BG.jpg");
+}
+/*
+footer{
+    background-color: #62bb46 ;
+    width: 100%;
+    height: 10px;
+}*/
